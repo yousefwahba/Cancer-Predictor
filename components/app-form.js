@@ -4,7 +4,6 @@ import axios from 'axios';
 function App() {
   const [formData, setFormData] = useState({
     age: '',
-    tumorSize: '',
     tumorGrade: '',
     cancerType: '',
     image: null,
@@ -44,7 +43,7 @@ function App() {
             <div>
               <label
                 htmlFor="age"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Age
               </label>
@@ -56,26 +55,7 @@ function App() {
                   value={formData.age}
                   onChange={handleChange}
                   required
-                  className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-2"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                htmlFor="tumorSize"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Tumor Size
-              </label>
-              <div className="mt-1">
-                <input
-                  type="number"
-                  name="tumorSize"
-                  id="tumorSize"
-                  value={formData.tumorSize}
-                  onChange={handleChange}
-                  required
-                  className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-2"
+                  className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border border-gray-300 rounded-md p-2"
                 />
               </div>
             </div>
@@ -86,7 +66,7 @@ function App() {
               >
                 Tumor Grade
               </label>
-              <div className="mt-1">
+              <div className="">
                 <select
                   name="tumorGrade"
                   id="tumorGrade"
